@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ClashRoyaleController;
+use App\Http\Controllers\Api\ClashRoyale\Playercontroller;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [ClashRoyaleController::class, 'getPlayer']);
+Route::get('/', [Playercontroller::class, 'getChestCycle']);
