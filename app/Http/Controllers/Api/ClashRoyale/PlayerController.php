@@ -17,7 +17,7 @@ class Playercontroller extends Controller
         $this->playerTag = config('clashroyale.player_tag');
     }
 
-    public function getPlayer()
+    public function getPlayer(): array
     {
         $response = Http::withHeaders([
             'Accept' => 'application/json',
@@ -26,10 +26,10 @@ class Playercontroller extends Controller
 
         $player = $response->json();
 
-        dd($player);
+        return $player;
     }
 
-    public function getChestCycle()
+    public function getChestCycle(): array
     {
         $response = Http::withHeaders([
             'Accept' => 'application/json',
@@ -38,10 +38,10 @@ class Playercontroller extends Controller
 
         $chestCycle = $response->json()["items"]; // ["items] because the response is wrapped;
 
-        dd($chestCycle);
+        return $chestCycle;
     }
 
-    public function getBattleLog()
+    public function getBattleLog(): array
     {
         $response = Http::withHeaders([
             'Accept' => 'application/json',
@@ -50,6 +50,6 @@ class Playercontroller extends Controller
 
         $battleLog = $response->json();
 
-        dd($battleLog);
+        return $battleLog;
     }
 }
