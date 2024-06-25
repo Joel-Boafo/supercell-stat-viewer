@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Api\ClashRoyale;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Contracts\View\View;
+use App\Http\Interfaces\PlayerInterface;
 use Illuminate\Support\Facades\Http;
 
-class Playercontroller extends Controller
+class Playercontroller extends Controller implements PlayerInterface
 {
     protected $token;
     protected $playerTag;
